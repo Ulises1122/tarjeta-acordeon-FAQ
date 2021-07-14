@@ -57,16 +57,23 @@ body{
     bottom: -150px;
     right: 67px;
 }
+.heading{
+    display: block;
+    position: relative;
+    top: 40px;
+    left: 10px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 700;
+}
 .acordeon{
     display: block;
     position: relative;
     width: 70%;
-    height: 40px;
+    height: auto;
     margin-top: 10px;
     padding: 5px;
     top: 50px;
     cursor: pointer;
-    border-bottom: 1px solid hsl(240, 5%, 91%);
 }
 .acordeon-boton{
     display: inline-block;
@@ -82,26 +89,39 @@ body{
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: 400;
 }
+.acordeon-boton:hover{
+    color: hsl(14, 88%, 65%);
+}
 .acordeon-boton-imagen{
     display: inline-block;
     position: absolute;
     right: 20px;
-    top: 15px;
-    transition: 0.3s;
+    top: 3px;
+    transition: 0.4s;
 }
-.acordeon-boton:active img{
+.acordeon-boton--active img{
     transform: rotate(180deg);
-    transition: 0.3s;
+    transition: 0.4s;
 }
-.acordeon-boton:hover{
-    color: hsl(14, 88%, 65%);
+.acordeon-boton--active{
+    font-weight: 700;
+    color: hsl(237, 12%, 33%);
 }
 .acordeon-contenido{
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.3s;
+    transition: max-height 0.4s;
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: 400;
     color: hsl(240, 6%, 50%);
+    text-align: left;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    padding: 5px 0px 5px 0px;
+}
+.acordeon-contenido p{
+    display: inline-block;
+    position: relative;
+    left: 7px;
     font-size: 0.7rem;
+    line-height: 1rem;
 }
